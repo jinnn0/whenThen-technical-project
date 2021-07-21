@@ -28,7 +28,7 @@
       .bar {
         width: 29px;
         height: 2px;
-        background-color: black;
+        background-color: $primary-color;
       }
 
       .bar-bottom {
@@ -53,7 +53,7 @@
 
     // call to action
     .join-btn {
-      background-color: black;
+      background-color: $primary-color;
       color: white;
       width: 104px;
       height: 40px;

@@ -8,8 +8,6 @@ html {
   font-size: 18px;
 }
 
-$primary-color: black;
-
 // Fonts
 @font-face {
   font-family: MonotypeBold;
@@ -60,6 +58,7 @@ p {
 }
 
 // Margins
+// Content here represents main text container in each section
 .content-margin-bottom-80 {
   margin-bottom: 80px;
 }

@@ -121,7 +121,7 @@ p {
 .header .header-inner .hamburger .bar {
   width: 29px;
   height: 2px;
-  background-color: black;
+  background-color: #000000;
 }
 
 .header .header-inner .hamburger .bar-bottom {
@@ -143,7 +143,7 @@ p {
 }
 
 .header .header-inner .join-btn {
-  background-color: black;
+  background-color: #000000;
   color: white;
   width: 104px;
   height: 40px;
