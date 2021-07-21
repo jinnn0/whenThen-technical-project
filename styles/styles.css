@@ -309,6 +309,7 @@ p {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  padding-top: 48px;
 }
 
 .feature-section .feature-inner .feature__right h2 {
