@@ -1,8 +1,6 @@
 .hero-section {
   .hero-text {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex-space-between;
 
     &__left {
       flex: 1.7;

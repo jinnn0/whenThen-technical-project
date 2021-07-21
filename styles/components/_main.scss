@@ -1,8 +1,6 @@
 .main-section {
   .main-text {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex-space-between;
 
     &__left {
       flex: 1.4;
@@ -20,8 +18,7 @@
     .arrows {
       width: 100%;
       height: 56px;
-      display: flex;
-      justify-content: space-between;
+      @include flex-space-between;
       position: absolute;
       top: -28px;
       padding: 0 2rem;
