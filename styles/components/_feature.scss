@@ -1,0 +1,37 @@
+.feature-section {
+  padding-bottom: 143px;
+
+  .feature-inner {
+    display: flex;
+
+    .feature__left {
+      flex: 1.4;
+
+      h4 {
+        margin-bottom: 8px;
+      }
+
+      p:last-child {
+        margin-bottom: 32px;
+      }
+
+      .feature-wrapper {
+        margin-bottom: 10px;
+
+        .feature {
+          width: 416px;
+          border-bottom: 1px solid black;
+          margin-bottom: 24px;
+        }
+      }
+    }
+
+    .feature__right {
+      flex: 1;
+
+      h2 {
+        line-height: 73px;
+      }
+    }
+  }
+}

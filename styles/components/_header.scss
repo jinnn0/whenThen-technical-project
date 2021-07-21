@@ -1,0 +1,69 @@
+.header {
+  background-color: white;
+  height: 96px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  .header-inner {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    // hamburger
+    .hamburger {
+      width: 35px;
+      height: 35px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      .bar {
+        width: 29px;
+        height: 2px;
+        background-color: black;
+      }
+
+      .bar-bottom {
+        margin-top: 5px;
+      }
+    }
+
+    // logo
+    .logo {
+      width: 50.51px;
+      height: 35.98px;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      a {
+        text-decoration: none;
+        display: inline-block;
+      }
+    }
+
+    // call to action
+    .join-btn {
+      background-color: black;
+      color: white;
+      width: 104px;
+      height: 40px;
+      padding: 10px;
+      border: none;
+      border-radius: 20px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+@import './base/global';
+@import './components/header';
+@import './components/hero';
+@import './components/main';
+@import './components/feature';
+
+// * {
+//   //   border: 1px solid black;
+// }
+
+// header.header {
+//   background-color: orange;
+// }
+
+// .hero-section {
+//   background-color: powderblue;
+// }
+
+// .main-section {
+//   background-color: rgb(138, 169, 255);
+// }
+
+// .feature-section {
+//   background-color: wheat;
+// }
+
+// .hero-text {
+//   &__left,
+//   &__right {
+//     // border: 1px solid black;
+//   }
+// }
+
+// .main-text {
+//   &__left,
+//   &__right {
+//     // border: 1px solid black;
+//   }
+// }
+
+// .feature__left,
+// .feature__right {
+//   //   border: 1px solid black;
+// }

@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+}
+
+$primary-color: black;
+
+// Fonts
+@font-face {
+  font-family: MonotypeBold;
+  src: url('../assets/font/Monotype\ -\ Helvetica\ Now\ Display\ Bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: MonotypeMedium;
+  src: url('../assets/font/Monotype\ -\ Helvetica\ Now\ Display\ Medium.otf') format('opentype');
+}
+
+@font-face {
+  font-family: MonotypeXLight;
+  src: url('../assets/font/Monotype\ -\ Helvetica\ Now\ Display\ XLight.otf') format('opentype');
+}
+
+// Typography
+h1,
+h2 {
+  font-family: 'MonotypeBold';
+}
+
+h1 {
+  font-size: 5rem; // 90px
+  line-height: 4rem; //73px;
+}
+
+h2 {
+  font-size: 4rem; // 72px
+  line-height: 4rem; //73px;
+}
+
+h4 {
+  font-family: 'MonotypeMedium';
+  font-size: 1.33rem; // 24px
+  line-height: 1.96rem; // 35.28px;;
+}
+
+p {
+  font-family: 'MonotypeXLight';
+  font-size: 1rem; // 18px
+  line-height: 1.59rem; // 28.62px;;
+}
+
+// Paddings
+.section-padding {
+  padding: 100px 0;
+}
+
+// Margins
+.content-margin-bottom-80 {
+  margin-bottom: 80px;
+}
+
+.content-margin-bottom-161 {
+  margin-bottom: 161px;
+}
+
+.content-margin-bottom-19 {
+  margin-bottom: 19px;
+}
+
+// Page conatiner
+.page-container {
+  // 1136 = max width 1440- padding 152 x 2
+  padding: 0 calc((100% - 1136px) / 2);
+  //   padding: 0 152px;
+  //   max-width: 1440px;
+  //   margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
