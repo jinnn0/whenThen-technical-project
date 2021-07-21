@@ -1,18 +1,38 @@
 .header {
   background-color: white;
-  height: 96px;
+  height: 48px;
   position: sticky;
   top: 0;
   z-index: 1;
 
+  @include tablet {
+    height: 76px;
+  }
+
+  @include desktop {
+    height: 96px;
+  }
+
   .header-inner {
     height: 100%;
+    padding: 0 20px;
     @include flex-space-between;
 
     // hamburger
     .hamburger {
-      width: 35px;
-      height: 35px;
+      width: 30px;
+      height: 30px;
+
+      @include tablet {
+        width: 32.5px;
+        height: 32.5px;
+      }
+
+      @include desktop {
+        width: 35px;
+        height: 35px;
+      }
+
       position: relative;
       @include flex-space-between;
       flex-direction: column;
@@ -23,8 +43,17 @@
       }
 
       .bar {
-        width: 29px;
-        height: 2px;
+        width: 17px;
+        height: 1px;
+
+        @include tablet {
+          width: 23px;
+        }
+
+        @include desktop {
+          width: 29px;
+          height: 2px;
+        }
         background-color: $primary-color;
       }
 
@@ -35,8 +64,18 @@
 
     // logo
     .logo {
-      width: 50.51px;
-      height: 35.98px;
+      width: 30px;
+      height: 30px;
+
+      @include tablet {
+        width: 37px;
+        height: 32px;
+      }
+
+      @include desktop {
+        width: 50.51px;
+        height: 35.98px;
+      }
 
       &:hover {
         cursor: pointer;
@@ -44,7 +83,12 @@
 
       a {
         text-decoration: none;
-        display: inline-block;
+        line-height: 30px;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
       }
     }
 
@@ -52,14 +96,29 @@
     .join-btn {
       background-color: $primary-color;
       color: white;
-      width: 104px;
-      height: 40px;
-      padding: 10px;
       border: none;
+      width: 60px;
+      height: 30px;
+      padding: 3px;
       border-radius: 20px;
+      font-size: 0.5rem;
 
       &:hover {
         cursor: pointer;
+      }
+
+      @include tablet {
+        width: 96px;
+        height: 35px;
+        padding: 6.5px;
+        font-size: 0.75rem;
+      }
+
+      @include desktop {
+        width: 104px;
+        height: 40px;
+        padding: 10px;
+        font-size: 1rem;
       }
     }
   }

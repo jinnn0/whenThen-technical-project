@@ -75,15 +75,28 @@ p {
 
 .header {
   background-color: white;
-  height: 96px;
+  height: 48px;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 1;
 }
 
+@media (min-width: 900px) {
+  .header {
+    height: 76px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header {
+    height: 96px;
+  }
+}
+
 .header .header-inner {
   height: 100%;
+  padding: 0 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -96,8 +109,8 @@ p {
 }
 
 .header .header-inner .hamburger {
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -117,14 +130,41 @@ p {
           justify-content: center;
 }
 
+@media (min-width: 900px) {
+  .header .header-inner .hamburger {
+    width: 32.5px;
+    height: 32.5px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header .header-inner .hamburger {
+    width: 35px;
+    height: 35px;
+  }
+}
+
 .header .header-inner .hamburger:hover {
   cursor: pointer;
 }
 
 .header .header-inner .hamburger .bar {
-  width: 29px;
-  height: 2px;
+  width: 17px;
+  height: 1px;
   background-color: #000000;
+}
+
+@media (min-width: 900px) {
+  .header .header-inner .hamburger .bar {
+    width: 23px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header .header-inner .hamburger .bar {
+    width: 29px;
+    height: 2px;
+  }
 }
 
 .header .header-inner .hamburger .bar-bottom {
@@ -132,8 +172,22 @@ p {
 }
 
 .header .header-inner .logo {
-  width: 50.51px;
-  height: 35.98px;
+  width: 30px;
+  height: 30px;
+}
+
+@media (min-width: 900px) {
+  .header .header-inner .logo {
+    width: 37px;
+    height: 32px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header .header-inner .logo {
+    width: 50.51px;
+    height: 35.98px;
+  }
 }
 
 .header .header-inner .logo:hover {
@@ -142,21 +196,45 @@ p {
 
 .header .header-inner .logo a {
   text-decoration: none;
-  display: inline-block;
+  line-height: 30px;
+}
+
+.header .header-inner .logo a img {
+  width: 100%;
+  height: 100%;
 }
 
 .header .header-inner .join-btn {
   background-color: #000000;
   color: white;
-  width: 104px;
-  height: 40px;
-  padding: 10px;
   border: none;
+  width: 60px;
+  height: 30px;
+  padding: 3px;
   border-radius: 20px;
+  font-size: 0.5rem;
 }
 
 .header .header-inner .join-btn:hover {
   cursor: pointer;
+}
+
+@media (min-width: 900px) {
+  .header .header-inner .join-btn {
+    width: 96px;
+    height: 35px;
+    padding: 6.5px;
+    font-size: 0.75rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header .header-inner .join-btn {
+    width: 104px;
+    height: 40px;
+    padding: 10px;
+    font-size: 1rem;
+  }
 }
 
 .hero-section .hero-text {
