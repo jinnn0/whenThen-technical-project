@@ -1,19 +1,36 @@
 .hero-section {
   .hero-text {
-    @include flex-space-between;
+    @include flex-col-center;
+    margin-bottom: 20px;
+
+    @include tablet-sm {
+      flex-direction: row;
+      margin-bottom: 50px;
+    }
+
+    @include desktop {
+      margin-bottom: 80px;
+    }
 
     &__left {
-      flex: 1.7;
+      margin-bottom: 15px;
+
+      @include tablet-sm {
+        flex: 1.7;
+        margin-bottom: 0;
+      }
     }
 
     &__right {
-      flex: 1;
+      @include tablet-sm {
+        flex: 1;
+      }
     }
   }
 
   .hero-img {
     width: 100%;
-    height: 710px;
+    height: clamp(225px, 80vh, 710px);
 
     img {
       width: 100%;

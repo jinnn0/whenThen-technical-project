@@ -8,6 +8,10 @@ html {
   font-size: 18px;
 }
 
+body {
+  min-width: 320px;
+}
+
 // Fonts
 @font-face {
   font-family: MonotypeBold;
@@ -31,8 +35,18 @@ h2 {
 }
 
 h1 {
-  font-size: 5rem; // 90px
-  line-height: 4rem; //73px;
+  font-size: 2rem;
+  line-height: 2rem;
+
+  @include tablet {
+    font-size: 3.5rem;
+    line-height: 3rem;
+  }
+
+  @include desktop {
+    font-size: 5rem; // 90px
+    line-height: 4rem; //73px;
+  }
 }
 
 h2 {
@@ -42,8 +56,23 @@ h2 {
 
 h4 {
   font-family: 'MonotypeMedium';
-  font-size: 1.33rem; // 24px
-  line-height: 1.96rem; // 35.28px;;
+  font-size: 0.7rem;
+  line-height: 1rem;
+
+  @include tablet-sm {
+    font-size: 0.8rem;
+    line-height: 1.15rem;
+  }
+
+  @include tablet {
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+  }
+
+  @include desktop {
+    font-size: 1.33rem; // 24px
+    line-height: 1.96rem; // 35.28px;;
+  }
 }
 
 p {
@@ -54,21 +83,25 @@ p {
 
 // Paddings
 .section-padding {
-  padding: 100px 0;
+  padding: 30px 0;
+
+  @include tablet-sm {
+    padding: 70px 0;
+  }
+
+  @include desktop {
+    padding: 100px 0;
+  }
 }
 
 // Margins
 // Content here represents main text container in each section
-.content-margin-bottom-80 {
-  margin-bottom: 80px;
+.content-margin-bottom-19 {
+  margin-bottom: 19px;
 }
 
 .content-margin-bottom-161 {
   margin-bottom: 161px;
-}
-
-.content-margin-bottom-19 {
-  margin-bottom: 19px;
 }
 
 // Page conatiner
@@ -78,7 +111,10 @@ p {
   //   padding: 0 152px;
   //   max-width: 1440px;
   //   margin: 0 auto;
-
   width: 100%;
   height: 100%;
+}
+
+.page-padding {
+  padding: 0 20px;
 }

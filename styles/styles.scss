@@ -1,10 +1,10 @@
-@import './base/global';
-@import './base/variable';
 @import './base/mixins';
+@import './base/variable';
+@import './base/global';
 @import './components/header';
 @import './components/hero';
-@import './components/main';
-@import './components/feature';
+// @import './components/main';
+// @import './components/feature';
 
 // * {
 //   //   border: 1px solid black;
@@ -27,6 +27,8 @@
 // }
 
 // .hero-text {
+//   border: 1px solid black;
+
 //   &__left,
 //   &__right {
 //     border: 1px solid black;
@@ -36,7 +38,7 @@
 // .main-text {
 //   &__left,
 //   &__right {
-//     // border: 1px solid black;
+//     // border: 1px solid `black;
 //   }
 // }
 
