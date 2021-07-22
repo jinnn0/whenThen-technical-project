@@ -1,16 +1,17 @@
 .main-section {
   .main-text {
+    text-align: center;
     @include flex-col-center;
     margin-bottom: 20px;
-    // align-items: flex-start;
 
     @include tablet-sm {
       flex-direction: row;
       margin-bottom: 50px;
+      text-align: start;
     }
 
     @include desktop {
-      margin-bottom: 80px;
+      margin-bottom: 161px;
     }
 
     &__left {
