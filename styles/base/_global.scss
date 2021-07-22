@@ -50,8 +50,18 @@ h1 {
 }
 
 h2 {
-  font-size: 4rem; // 72px
-  line-height: 4rem; //73px;
+  font-size: 2rem; // 72px
+  line-height: 2rem; //73px;
+
+  @include tablet {
+    font-size: 3.5rem;
+    line-height: 3rem;
+  }
+
+  @include desktop {
+    font-size: 4rem; // 72px
+    line-height: 4rem; //73px;
+  }
 }
 
 h4 {

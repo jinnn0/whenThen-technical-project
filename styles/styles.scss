@@ -3,7 +3,7 @@
 @import './base/global';
 @import './components/header';
 @import './components/hero';
-// @import './components/main';
+@import './components/main';
 // @import './components/feature';
 
 // * {
@@ -12,6 +12,9 @@
 
 // header.header {
 //   background-color: orange;
+//   .header-inner {
+//     border: 1px solid black;
+//   }
 // }
 
 // .hero-section {
@@ -36,9 +39,10 @@
 // }
 
 // .main-text {
+//   border: 1px solid black;
 //   &__left,
 //   &__right {
-//     // border: 1px solid `black;
+//     border: 1px solid black;
 //   }
 // }
 

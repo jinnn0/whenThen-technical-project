@@ -1,11 +1,14 @@
 .hero-section {
   .hero-text {
+    text-align: center;
+
     @include flex-col-center;
     margin-bottom: 20px;
 
     @include tablet-sm {
       flex-direction: row;
       margin-bottom: 50px;
+      text-align: start;
     }
 
     @include desktop {
@@ -30,7 +33,8 @@
 
   .hero-img {
     width: 100%;
-    height: clamp(225px, 80vh, 710px);
+    // height: clamp(225px, 80vh, 710px);
+    height: clamp(225px, 50vh, 710px);
 
     img {
       width: 100%;

@@ -1,30 +1,64 @@
 .main-section {
   .main-text {
-    @include flex-space-between;
+    @include flex-col-center;
+    margin-bottom: 20px;
+    // align-items: flex-start;
+
+    @include tablet-sm {
+      flex-direction: row;
+      margin-bottom: 50px;
+    }
+
+    @include desktop {
+      margin-bottom: 80px;
+    }
 
     &__left {
-      flex: 1.4;
+      margin-bottom: 15px;
+
+      @include tablet-sm {
+        flex: 1;
+      }
     }
 
     &__right {
-      flex: 1;
+      @include tablet-sm {
+        flex: 1;
+      }
     }
   }
 
   .main-carosoul {
-    height: 640px;
+    height: clamp(225px, 43vh, 640px);
     position: relative;
 
     .arrows {
       width: 100%;
-      height: 56px;
-      @include flex-space-between;
+      @include flex-row-space-between;
       position: absolute;
-      top: -28px;
-      padding: 0 2rem;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 0 1rem;
 
-      .arrow:hover {
-        cursor: pointer;
+      .arrow {
+        height: 30px;
+
+        @include tablet-sm {
+          height: 40px;
+        }
+
+        @include tablet {
+          height: 50px;
+          padding: 0 2rem;
+        }
+
+        @include desktop {
+          height: 56px;
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
       }
     }
 
@@ -40,12 +74,17 @@
   }
 
   .carosoul-bar {
-    width: 100%;
+    width: 90%;
     height: 1px;
     background-color: #7c7c7c;
     opacity: 0.5;
+    margin: 0 auto;
     margin-top: 44px;
     position: relative;
+
+    @include tablet {
+      width: 100%;
+    }
 
     &:after {
       content: '';
