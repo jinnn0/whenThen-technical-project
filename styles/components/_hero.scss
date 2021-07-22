@@ -1,40 +1,18 @@
 .hero-section {
-  .hero-text {
-    text-align: center;
-
-    @include flex-col-center;
-    margin-bottom: 20px;
+  .hero-img {
+    width: 100%;
 
     @include tablet-sm {
-      flex-direction: row;
-      margin-bottom: 50px;
-      text-align: start;
+      height: 450px;
+    }
+
+    @include tablet {
+      height: 600px;
     }
 
     @include desktop {
-      margin-bottom: 80px;
+      height: 710px;
     }
-
-    &__left {
-      margin-bottom: 15px;
-
-      @include tablet-sm {
-        flex: 1.7;
-        margin-bottom: 0;
-      }
-    }
-
-    &__right {
-      @include tablet-sm {
-        flex: 1;
-      }
-    }
-  }
-
-  .hero-img {
-    width: 100%;
-    // height: clamp(225px, 80vh, 710px);
-    height: clamp(225px, 50vh, 710px);
 
     img {
       width: 100%;

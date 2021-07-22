@@ -4,7 +4,7 @@
 @import './components/header';
 @import './components/hero';
 @import './components/main';
-// @import './components/feature';
+@import './components/feature';
 
 // * {
 //   //   border: 1px solid black;
@@ -46,7 +46,10 @@
 //   }
 // }
 
-// .feature__left,
-// .feature__right {
+// .feature-text {
 //   border: 1px solid black;
+//   &__left,
+//   &__right {
+//     border: 1px solid black;
+//   }
 // }

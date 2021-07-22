@@ -1,30 +1,17 @@
 .main-section {
-  .main-text {
-    text-align: center;
-    @include flex-col-center;
-    margin-bottom: 20px;
+  .section-text {
+    h4 {
+      font-size: 0.77rem;
+      line-height: 1.1rem;
 
-    @include tablet-sm {
-      flex-direction: row;
-      margin-bottom: 50px;
-      text-align: start;
-    }
-
-    @include desktop {
-      margin-bottom: 161px;
-    }
-
-    &__left {
-      margin-bottom: 15px;
-
-      @include tablet-sm {
-        flex: 1;
+      @include tablet {
+        font-size: 1.3rem;
+        line-height: 1.5rem;
       }
-    }
 
-    &__right {
-      @include tablet-sm {
-        flex: 1;
+      @include desktop {
+        font-size: 1.33rem;
+        line-height: 1.96rem;
       }
     }
   }
@@ -67,6 +54,7 @@
       display: flex;
       overflow-x: hidden;
       height: 100%;
+      justify-content: center;
 
       img {
         object-fit: contain;

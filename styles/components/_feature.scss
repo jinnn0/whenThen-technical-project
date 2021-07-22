@@ -1,37 +1,52 @@
 .feature-section {
   padding-bottom: 143px;
 
-  .feature-inner {
-    display: flex;
-
-    .feature__left {
-      flex: 1.4;
+  .section-text {
+    &__left {
+      margin-bottom: 100px;
 
       h4 {
         margin-bottom: 8px;
       }
 
-      p:last-child {
+      p {
         margin-bottom: 32px;
       }
 
       .feature-wrapper {
         margin-bottom: 10px;
+        width: 290px;
+
+        @include tablet-sm {
+          width: 320px;
+        }
+
+        @include tablet {
+          width: 416px;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
 
         .feature {
-          width: 416px;
+          width: 100%;
           border-bottom: 1px solid $primary-color;
           margin-bottom: 24px;
         }
       }
     }
 
-    .feature__right {
-      flex: 1;
-      padding-top: 48px;
+    &__right {
+      @include flex-col-center;
+
+      @include tablet-sm {
+        padding-top: 48px;
+        align-self: flex-start;
+      }
 
       h2 {
-        line-height: 73px;
+        margin-bottom: 2rem;
       }
     }
   }

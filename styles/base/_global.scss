@@ -35,8 +35,13 @@ h2 {
 }
 
 h1 {
-  font-size: 2rem;
-  line-height: 2rem;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  margin-bottom: 2rem;
+
+  @include tablet-sm {
+    margin-bottom: 0;
+  }
 
   @include tablet {
     font-size: 3.5rem;
@@ -50,8 +55,13 @@ h1 {
 }
 
 h2 {
-  font-size: 2rem; // 72px
-  line-height: 2rem; //73px;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  margin-bottom: 2rem;
+
+  @include tablet-sm {
+    margin-bottom: 0;
+  }
 
   @include tablet {
     font-size: 3.5rem;
@@ -66,8 +76,29 @@ h2 {
 
 h4 {
   font-family: 'MonotypeMedium';
+  font-size: 1rem;
+  line-height: 1.3rem;
+
+  @include tablet-sm {
+    font-size: 0.8rem;
+    line-height: 1.15rem;
+  }
+
+  @include tablet {
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+  }
+
+  @include desktop {
+    font-size: 1.33rem; // 24px
+    line-height: 1.96rem; // 35.28px;;
+  }
+}
+
+p {
+  font-family: 'MonotypeXLight';
   font-size: 0.7rem;
-  line-height: 1rem;
+  line-height: 1.15rem;
 
   @include tablet-sm {
     font-size: 0.8rem;
@@ -80,20 +111,15 @@ h4 {
   }
 
   @include desktop {
-    font-size: 1.33rem; // 24px
-    line-height: 1.96rem; // 35.28px;;
+    font-size: 1rem; // 18px
+    line-height: 1.59rem; // 28.62px
   }
-}
-
-p {
-  font-family: 'MonotypeXLight';
-  font-size: 1rem; // 18px
-  line-height: 1.59rem; // 28.62px;;
 }
 
 // Paddings
 .section-padding {
   padding: 30px 0;
+  padding: 50px 0;
 
   @include tablet-sm {
     padding: 70px 0;
@@ -104,23 +130,49 @@ p {
   }
 }
 
-// Margins
-// Content here represents main text container in each section
-.content-margin-bottom-19 {
-  margin-bottom: 19px;
-}
-
-// Page conatiner
+// Page conatiner & padding
 .page-container {
   // 1136 = max width 1440- padding 152 x 2
   padding: 0 calc((100% - 1136px) / 2);
-  //   padding: 0 152px;
-  //   max-width: 1440px;
-  //   margin: 0 auto;
   width: 100%;
   height: 100%;
 }
 
 .page-padding {
   padding: 0 20px;
+}
+
+// Section text
+.section-text {
+  @include flex-col-center;
+  margin-bottom: 100px;
+  text-align: center;
+
+  @include tablet-sm {
+    flex-direction: row;
+    align-items: center;
+    text-align: start;
+  }
+
+  @include desktop {
+    margin-bottom: 80px;
+  }
+
+  &__left {
+    margin-bottom: 40px;
+
+    @include tablet-sm {
+      flex: 1;
+      margin-bottom: 0;
+    }
+  }
+
+  &__right {
+    @include tablet-sm {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 }
