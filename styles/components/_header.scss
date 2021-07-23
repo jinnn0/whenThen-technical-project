@@ -111,9 +111,11 @@
       padding: 3px;
       border-radius: 20px;
       font-size: 0.5rem;
+      transition: opacity 0.05s ease-in-out;
 
       &:hover {
         cursor: pointer;
+        opacity: 0.85;
       }
 
       @include tablet {

@@ -6,32 +6,37 @@
   width: 100%;
   height: 50vh;
   min-height: 350px;
-  padding-top: 48px;
   z-index: 200;
   background-color: $primary-color;
   color: white;
-  //   overflow: hidden;
-
-  @include tablet {
-    padding-top: 76px;
-  }
-
-  @include desktop {
-    padding-top: 96px;
-  }
 
   ul {
     list-style-type: none;
-    padding-top: 2.5rem;
+    padding-top: 1.3rem;
 
     li {
-      font-size: 32px;
-      line-height: 72px;
+      font-size: 1rem;
+      line-height: 2.23rem;
+
+      @include tablet {
+        font-size: 1.4rem;
+        line-height: 3.2rem;
+      }
+
+      @include desktop {
+        font-size: 1.8rem; // 32px
+        line-height: 4rem; // 72px
+      }
     }
 
     a {
       color: white;
       text-decoration: none;
+      position: relative;
+
+      &:hover {
+        border-bottom: 1px solid white;
+      }
     }
   }
 }
