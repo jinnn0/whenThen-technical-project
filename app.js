@@ -16,8 +16,8 @@ hamburger.addEventListener('click', (e) => {
 function openNav() {
   let tl = gsap.timeline();
 
-  tl.to('.nav', { duration: 0.8, y: '50vh', ease: 'expo.inOut' })
-    .to('.header', { duration: 0.01, backgroundColor: 'black' }, '-=0.5')
+  tl.to('.nav', { duration: 0.8, top: '0', ease: 'expo.inOut' })
+    .to('.header', { duration: 0.01, backgroundColor: 'black' }, '-=0.4')
     .to('.join-btn', { backgroundColor: '#474747' }, 0.1)
     .to('.logo svg path', { fill: 'white' }, 0.1)
     .to('.hamburger .bar', { duration: 0.3, scaleX: 0, ease: 'expo.inOut' }, 0.1, 'hamburger')
@@ -38,8 +38,8 @@ function openNav() {
 function closeNav() {
   let tl = gsap.timeline();
 
-  tl.to('.nav', { duration: 0.8, y: 0, ease: 'expo.inOut' }, 'navFadeUp')
-    .to('.header', { duration: 0.03, backgroundColor: 'white' }, '-=0.2')
+  tl.to('.nav', { duration: 0.8, top: '-100%', ease: 'expo.inOut' }, 'navFadeUp')
+    .to('.header', { duration: 0.03, backgroundColor: 'white' }, '-=0.4')
     .to('.join-btn', { backgroundColor: 'black' }, 'navFadeUp+=0.3')
     .to('.logo svg path', { fill: 'black' }, 'navFadeUp+=0.3')
     .to(
