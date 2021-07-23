@@ -5,18 +5,6 @@
   top: 0;
   z-index: 300;
 
-  &.nav-open {
-    background-color: black;
-
-    .header-inner .hamburger .bar {
-      background-color: white;
-    }
-
-    .header-inner .join-btn {
-      background-color: $secondary-color;
-    }
-  }
-
   @include tablet {
     height: 76px;
   }
@@ -63,6 +51,7 @@
           width: 29px;
           height: 2px;
         }
+
         background-color: $primary-color;
       }
 
