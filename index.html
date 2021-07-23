@@ -9,7 +9,7 @@
   </head>
   <body>
     <!-- header  -->
-    <header class="header">
+    <header class="header nav-open">
       <div class="page-container">
         <div class="header-inner page-padding">
           <div class="hamburger">
@@ -18,13 +18,38 @@
           </div>
           <div class="logo">
             <a href="./">
-              <img src="./assets/images/logo.svg" alt="logo" />
+              <!-- <img src="./assets/logo/logo-black.svg" alt="logo" /> -->
+              <img src="./assets/logo/logo-white.svg" alt="logo" />
             </a>
           </div>
           <button class="join-btn">Join beta</button>
         </div>
       </div>
     </header>
+
+    <!-- Nav -->
+    <nav class="nav">
+      <div class="page-container">
+        <div class="nav-inner page-padding">
+          <ul class="nav-links">
+            <li>
+              <a href="./">For Companies</a>
+            </li>
+            <li>
+              <a href="./">News</a>
+            </li>
+            <li>
+              <a href="./">About</a>
+            </li>
+            <li>
+              <a href="./">Career</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="overlay"></div>
 
     <!-- hero -->
     <section class="hero-section section-padding">
@@ -53,6 +78,11 @@
         </div>
         <div class="hero-img">
           <img src="./assets/images/hero.png" alt="hero image" />
+          <img
+            class="screen js-expand-screen"
+            src="./assets/images/hero-screen.svg"
+            alt="hero image screen"
+          />
         </div>
       </div>
     </section>

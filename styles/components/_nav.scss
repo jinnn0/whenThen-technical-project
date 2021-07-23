@@ -1,0 +1,37 @@
+.nav {
+  font-family: 'MonotypeXLight';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50vh;
+  min-height: 350px;
+  padding-top: 48px;
+  z-index: 200;
+  background-color: $primary-color;
+  color: white;
+  //   overflow: hidden;
+
+  @include tablet {
+    padding-top: 76px;
+  }
+
+  @include desktop {
+    padding-top: 96px;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-top: 2.5rem;
+
+    li {
+      font-size: 32px;
+      line-height: 72px;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
