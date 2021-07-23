@@ -174,4 +174,27 @@ p {
       align-items: center;
     }
   }
+
+  // Text fade up animation
+  // Create a container that the texts can be hide from at initial point
+  position: relative;
+
+  h1,
+  h4,
+  h2,
+  p {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: white;
+  }
 }

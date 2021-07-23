@@ -1,7 +1,23 @@
 // DOM elements
 const hamburger = document.querySelector('.hamburger');
+const texts = document.querySelectorAll('.text');
 
-// Nav Animation
+// Register scrollTrigger
+gsap.registerPlugin(ScrollTrigger);
+
+// Section text fade-up animation
+texts.forEach((text) => {
+  gsap.to(text, {
+    scrollTrigger: text,
+    delay: text.dataset.delay,
+    duration: 0.35,
+    y: 0,
+    opacity: 1,
+    ease: Power3.easeIn
+  });
+});
+
+// Nav animation
 let isNavOpen = false;
 hamburger.addEventListener('click', (e) => {
   isNavOpen = !isNavOpen;

@@ -9,6 +9,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
     <script src="./app.js" defer></script>
     <title>whenThen</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        /* background-color: pink; */
+      }
+    </style>
   </head>
   <body>
     <!-- header  -->
@@ -65,7 +72,7 @@
       <div class="page-container">
         <div class="section-text page-padding">
           <div class="section-text__left">
-            <h1>
+            <h1 class="text" data-delay="0">
               The future
               <br />
               of commerce
@@ -73,7 +80,7 @@
           </div>
           <div class="section-text__right">
             <div>
-              <h4>
+              <h4 class="text" data-delay="0.25">
                 GoPlus is the only immersive
                 <br />
                 automated commerce platform
@@ -87,11 +94,11 @@
         </div>
         <div class="hero-img">
           <img src="./assets/images/hero.png" alt="hero image" />
-          <img
+          <!-- <img
             class="hero-screen js-expand-screen"
-            src="./assets/images/hero-screen.png"
+            src="./assets/images/hero-screen.svg"
             alt="hero image screen"
-          />
+          /> -->
         </div>
       </div>
     </section>
@@ -99,9 +106,10 @@
     <!-- main -->
     <section class="main-section section-padding">
       <div class="page-container">
+        <div class="box"></div>
         <div class="section-text page-padding">
           <div class="section-text__left">
-            <h2>
+            <h2 class="text" data-delay="0">
               Immersive
               <br />
               experience
@@ -109,7 +117,7 @@
           </div>
           <div class="section-text__right">
             <div>
-              <h4>
+              <h4 class="text" data-delay="0.25">
                 Integer purus amet, quam neque auctor enim
                 <br />
                 cursus luctus non. Pretium nulla aliquet
@@ -141,8 +149,8 @@
           <div class="section-text__left">
             <div class="feature-wrapper">
               <div class="feature">
-                <h4>Smart Capacity</h4>
-                <p>
+                <h4 class="text" data-delay="">Smart Capacity</h4>
+                <p class="text" data-delay="">
                   Integer purus amet, quam neque auctor enim cursus
                   <br />
                   uctus non. Pretium nulla aliquet ornare placerat
@@ -152,8 +160,8 @@
             </div>
             <div class="feature-wrapper">
               <div class="feature">
-                <h4>Seamless drop-off</h4>
-                <p>
+                <h4 class="text" data-delay="">Seamless drop-off</h4>
+                <p class="text" data-delay="">
                   Integer purus amet, quam neque auctor enim cursus
                   <br />
                   uctus non. Pretium nulla aliquet ornare placerat
@@ -163,8 +171,8 @@
             </div>
             <div class="feature-wrapper">
               <div class="feature">
-                <h4>Automations</h4>
-                <p>
+                <h4 class="text" data-delay="">Automations</h4>
+                <p class="text" data-delay="">
                   Integer purus amet, quam neque auctor enim cursus
                   <br />
                   uctus non. Pretium nulla aliquet ornare placerat
@@ -175,11 +183,11 @@
           </div>
           <div class="section-text__right">
             <div>
-              <h2>
+              <h2 class="text" data-delay="">
                 The future <br />
                 of logistics
               </h2>
-              <h4>
+              <h4 class="text" data-delay="">
                 Integer purus amet, quam neque
                 <br />
                 auctor enim cursus luctus non.
