@@ -1,4 +1,10 @@
 .hero-section {
+  .section-text__left {
+    @include tablet-sm {
+      flex: 1.1;
+      margin-bottom: 0;
+    }
+  }
   .hero-img {
     width: 100%;
     position: relative;

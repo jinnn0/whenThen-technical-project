@@ -239,7 +239,7 @@ p {
 
 @media (min-width: 900px) {
   .header {
-    height: 7836px;
+    height: 83px;
   }
 }
 
@@ -436,6 +436,15 @@ p {
 
 .nav ul a:hover {
   border-bottom: 1px solid white;
+}
+
+@media (min-width: 590px) {
+  .hero-section .section-text__left {
+    -webkit-box-flex: 1.1;
+        -ms-flex: 1.1;
+            flex: 1.1;
+    margin-bottom: 0;
+  }
 }
 
 .hero-section .hero-img {
