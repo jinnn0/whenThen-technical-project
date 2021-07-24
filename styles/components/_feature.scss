@@ -5,6 +5,8 @@
 
       h4 {
         margin-bottom: 8px;
+        transform: translateY(0);
+        opacity: 1;
       }
 
       p {
@@ -14,6 +16,7 @@
       .feature-wrapper {
         margin-bottom: 10px;
         width: 290px;
+        position: relative;
 
         @include tablet-sm {
           width: 320px;
@@ -31,6 +34,19 @@
           width: 100%;
           border-bottom: 1px solid $primary-color;
           margin-bottom: 24px;
+          transform: translateX(-100%);
+          opacity: 0;
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0%;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          z-index: 10;
+          background-color: white;
         }
       }
     }

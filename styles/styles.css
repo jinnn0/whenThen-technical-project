@@ -36,13 +36,6 @@ h2 {
 h1 {
   font-size: 2.5rem;
   line-height: 2.5rem;
-  margin-bottom: 2rem;
-}
-
-@media (min-width: 590px) {
-  h1 {
-    margin-bottom: 0;
-  }
 }
 
 @media (min-width: 900px) {
@@ -62,13 +55,6 @@ h1 {
 h2 {
   font-size: 2.5rem;
   line-height: 2.5rem;
-  margin-bottom: 2rem;
-}
-
-@media (min-width: 590px) {
-  h2 {
-    margin-bottom: 0;
-  }
 }
 
 @media (min-width: 900px) {
@@ -200,14 +186,13 @@ p {
 
 @media (min-width: 1200px) {
   .section-text {
-    margin-bottom: 80px;
+    margin-bottom: 100px;
   }
 }
 
 .section-text h1,
 .section-text h4,
-.section-text h2,
-.section-text p {
+.section-text h2 {
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
   opacity: 0;
@@ -538,6 +523,9 @@ p {
 
 .feature-section .section-text__left h4 {
   margin-bottom: 8px;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
 }
 
 .feature-section .section-text__left p {
@@ -547,6 +535,7 @@ p {
 .feature-section .section-text__left .feature-wrapper {
   margin-bottom: 10px;
   width: 290px;
+  position: relative;
 }
 
 @media (min-width: 590px) {
@@ -569,6 +558,20 @@ p {
   width: 100%;
   border-bottom: 1px solid #000000;
   margin-bottom: 24px;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  opacity: 0;
+}
+
+.feature-section .section-text__left .feature-wrapper:before {
+  content: '';
+  position: absolute;
+  top: 0%;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: white;
 }
 
 .feature-section .section-text__right {

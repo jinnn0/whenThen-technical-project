@@ -1,6 +1,7 @@
 // DOM elements
 const hamburger = document.querySelector('.hamburger');
-const texts = document.querySelectorAll('.text');
+const texts = document.querySelectorAll('.js-text');
+const featureTextsLeft = document.querySelectorAll('.feature-section .js-text');
 
 // Register scrollTrigger
 gsap.registerPlugin(ScrollTrigger);
@@ -28,7 +29,17 @@ texts.forEach((text) => {
     duration: 0.25,
     y: 0,
     opacity: 1,
-    ease: Power3.easeIn
+    ease: Power3.easeOut
+  });
+});
+
+featureTextsLeft.forEach((text) => {
+  gsap.to(text, {
+    scrollTrigger: text,
+    delay: text.dataset.delay,
+    x: 0,
+    opacity: 1,
+    ease: Power4.easeOut
   });
 });
 
