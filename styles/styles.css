@@ -440,24 +440,7 @@ p {
 
 .hero-section .hero-img {
   width: 100%;
-}
-
-@media (min-width: 590px) {
-  .hero-section .hero-img {
-    height: 450px;
-  }
-}
-
-@media (min-width: 900px) {
-  .hero-section .hero-img {
-    height: 600px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .hero-section .hero-img {
-    height: 710px;
-  }
+  position: relative;
 }
 
 .hero-section .hero-img img {
@@ -465,6 +448,17 @@ p {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.hero-section .hero-img .hero-screen {
+  position: absolute;
+  width: auto;
+  height: 55%;
+  top: 55%;
+  left: 49.6%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0;
 }
 
 .main-section .section-text h4 {

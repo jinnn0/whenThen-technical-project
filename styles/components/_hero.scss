@@ -1,23 +1,22 @@
 .hero-section {
   .hero-img {
     width: 100%;
-
-    @include tablet-sm {
-      height: 450px;
-    }
-
-    @include tablet {
-      height: 600px;
-    }
-
-    @include desktop {
-      height: 710px;
-    }
+    position: relative;
 
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+
+    .hero-screen {
+      position: absolute;
+      width: auto;
+      height: 55%;
+      top: 55%;
+      left: 49.6%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
     }
   }
 }

@@ -2,9 +2,24 @@
 const hamburger = document.querySelector('.hamburger');
 const texts = document.querySelectorAll('.js-text');
 const featureTextsLeft = document.querySelectorAll('.feature-section .js-text');
+const heroScreen = document.querySelector('.hero-section .js-hero-screen');
 
 // Register scrollTrigger
 gsap.registerPlugin(ScrollTrigger);
+
+let innerWidth = window.innerWidth;
+
+// Hero overlay image animation
+window.addEventListener('scroll', (e) => {
+  let scrolled = window.pageYOffset;
+
+  heroScreen.style.transform = `translate(-50%, ${constrain(
+    scrolled * 0.09 - 60,
+    -50,
+    -30
+  )}%) scale(${constrain(scrolled * 0.007, 1, 1.9)})`;
+  heroScreen.style.opacity = constrain(scrolled * 0.01, 0, 1);
+});
 
 // Carousel
 const swiper = new Swiper('.swiper-container', {
@@ -96,4 +111,9 @@ function closeNav() {
     .to('.bar-top', { duration: 0.4, scaleX: 1 }, 'scale')
     .to('.bar-bottom', { duration: 0.4, scaleX: 1 }, 'scale')
     .to('.body-overlay', { display: 'none', ease: 'expo.inOut' }, '-=1.3');
+}
+
+// Utility function
+function constrain(value, min, max) {
+  return value > max ? max : value < min ? min : value;
 }
