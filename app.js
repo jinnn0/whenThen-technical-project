@@ -80,7 +80,7 @@ function closeNav() {
   let tl = gsap.timeline();
 
   tl.to('.nav', { duration: 0.8, top: '-100%', ease: 'expo.inOut' }, 'navFadeUp')
-    .to('.header', { duration: 0.03, backgroundColor: 'white' }, '-=0.4')
+    .to('.header', { duration: 0.01, backgroundColor: 'white' }, '-=0.42')
     .to('.join-btn', { backgroundColor: 'black' }, 'navFadeUp+=0.3')
     .to('.logo svg path', { fill: 'black' }, 'navFadeUp+=0.3')
     .to(
@@ -117,6 +117,7 @@ let swiper = new Swiper('.swiper-container', {
 window.addEventListener('resize', () => {
   innerWidth = window.innerWidth;
   swiper.params.slidesPerView = innerWidth < 700 ? 1 : 1.3;
+  console.log('Resizing...');
 });
 
 // Utility function
