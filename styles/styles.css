@@ -491,7 +491,7 @@ p {
 
 .main-section .swiper-container {
   width: 100%;
-  height: clamp(225px, 43vh, 700px);
+  height: 100%;
 }
 
 .main-section .swiper-container .swiper-button-prev,
