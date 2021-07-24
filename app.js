@@ -7,8 +7,6 @@ const heroScreen = document.querySelector('.hero-section .js-hero-screen');
 // Register scrollTrigger
 gsap.registerPlugin(ScrollTrigger);
 
-let innerWidth = window.innerWidth;
-
 // Hero overlay image animation
 window.addEventListener('scroll', (e) => {
   let scrolled = window.pageYOffset;
@@ -19,21 +17,6 @@ window.addEventListener('scroll', (e) => {
     -30
   )}%) scale(${constrain(scrolled * 0.007, 1, 1.9)})`;
   heroScreen.style.opacity = constrain(scrolled * 0.01, 0, 1);
-});
-
-// Carousel
-const swiper = new Swiper('.swiper-container', {
-  pagination: {
-    el: '.swiper-pagination'
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev'
-  },
-  slidesPerView: 1.3,
-  spaceBetween: 40,
-  loop: true,
-  centeredSlides: true
 });
 
 // Section text fade-up animation
@@ -112,6 +95,29 @@ function closeNav() {
     .to('.bar-bottom', { duration: 0.4, scaleX: 1 }, 'scale')
     .to('.body-overlay', { display: 'none', ease: 'expo.inOut' }, '-=1.3');
 }
+
+// Carousel
+let innerWidth = window.innerWidth;
+
+let swiper = new Swiper('.swiper-container', {
+  pagination: {
+    el: '.swiper-pagination'
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  },
+  // show one slide when the screen is smaller than 700
+  slidesPerView: innerWidth < 700 ? 1 : 1.3,
+  spaceBetween: 40,
+  loop: true,
+  centeredSlides: true
+});
+
+window.addEventListener('resize', () => {
+  innerWidth = window.innerWidth;
+  swiper.params.slidesPerView = innerWidth < 700 ? 1 : 1.3;
+});
 
 // Utility function
 function constrain(value, min, max) {
