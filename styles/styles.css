@@ -512,96 +512,35 @@ p {
   }
 }
 
-.main-section .main-carosoul {
-  height: clamp(225px, 43vh, 640px);
-  position: relative;
-}
-
-.main-section .main-carosoul .arrows {
+.main-section .swiper-container {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  padding: 0 1rem;
+  height: clamp(225px, 43vh, 700px);
 }
 
-.main-section .main-carosoul .arrows .arrow {
-  height: 30px;
-}
-
-@media (min-width: 590px) {
-  .main-section .main-carosoul .arrows .arrow {
-    height: 40px;
-  }
+.main-section .swiper-container .swiper-button-prev,
+.main-section .swiper-container .swiper-button-next {
+  width: 1rem;
+  height: 1rem;
 }
 
 @media (min-width: 900px) {
-  .main-section .main-carosoul .arrows .arrow {
-    height: 50px;
-    padding: 0 2rem;
+  .main-section .swiper-container .swiper-button-prev,
+  .main-section .swiper-container .swiper-button-next {
+    width: initial;
+    height: initial;
   }
 }
 
-@media (min-width: 1200px) {
-  .main-section .main-carosoul .arrows .arrow {
-    height: 56px;
-  }
+.main-section .swiper-container .swiper-button-prev {
+  left: 14%;
 }
 
-.main-section .main-carosoul .arrows .arrow:hover {
-  cursor: pointer;
+.main-section .swiper-container .swiper-button-next {
+  right: 14%;
 }
 
-.main-section .main-carosoul .imgs {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  overflow-x: hidden;
-  height: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.main-section .main-carosoul .imgs img {
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
-.main-section .carosoul-bar {
-  width: 90%;
-  height: 1px;
-  background-color: #7c7c7c;
-  opacity: 0.5;
-  margin: 0 auto;
-  margin-top: 44px;
-  position: relative;
-}
-
-@media (min-width: 900px) {
-  .main-section .carosoul-bar {
-    width: 100%;
-  }
-}
-
-.main-section .carosoul-bar:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 300px;
-  height: 1px;
-  background-color: #000000;
+.main-section .swiper-container .swiper-pagination-bullet {
+  background-color: rgba(0, 0, 0, 0.221);
 }
 
 .feature-section {

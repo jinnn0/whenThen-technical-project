@@ -1,5 +1,6 @@
 .main-section {
   .section-text {
+    // overrides global h4
     h4 {
       font-size: 0.77rem;
       line-height: 1.1rem;
@@ -16,73 +17,32 @@
     }
   }
 
-  .main-carosoul {
-    height: clamp(225px, 43vh, 640px);
-    position: relative;
+  // custom styles to Swiper
+  .swiper-container {
+    width: 100%;
+    height: clamp(225px, 43vh, 700px);
 
-    .arrows {
-      width: 100%;
-      @include flex-row-space-between;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      padding: 0 1rem;
+    .swiper-button-prev,
+    .swiper-button-next {
+      width: 1rem;
+      height: 1rem;
 
-      .arrow {
-        height: 30px;
-
-        @include tablet-sm {
-          height: 40px;
-        }
-
-        @include tablet {
-          height: 50px;
-          padding: 0 2rem;
-        }
-
-        @include desktop {
-          height: 56px;
-        }
-
-        &:hover {
-          cursor: pointer;
-        }
+      @include tablet {
+        width: initial;
+        height: initial;
       }
     }
 
-    .imgs {
-      display: flex;
-      overflow-x: hidden;
-      height: 100%;
-      justify-content: center;
-
-      img {
-        object-fit: contain;
-      }
-    }
-  }
-
-  .carosoul-bar {
-    width: 90%;
-    height: 1px;
-    background-color: #7c7c7c;
-    opacity: 0.5;
-    margin: 0 auto;
-    margin-top: 44px;
-    position: relative;
-
-    @include tablet {
-      width: 100%;
+    .swiper-button-prev {
+      left: 14%;
     }
 
-    &:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 300px;
-      height: 1px;
-      background-color: #000000;
+    .swiper-button-next {
+      right: 14%;
+    }
+
+    .swiper-pagination-bullet {
+      background-color: rgba(0, 0, 0, 0.221);
     }
   }
 }

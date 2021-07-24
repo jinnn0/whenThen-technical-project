@@ -5,12 +5,27 @@ const texts = document.querySelectorAll('.text');
 // Register scrollTrigger
 gsap.registerPlugin(ScrollTrigger);
 
+// Carousel
+const swiper = new Swiper('.swiper-container', {
+  pagination: {
+    el: '.swiper-pagination'
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  },
+  slidesPerView: 1.3,
+  spaceBetween: 40,
+  loop: true,
+  centeredSlides: true
+});
+
 // Section text fade-up animation
 texts.forEach((text) => {
   gsap.to(text, {
     scrollTrigger: text,
     delay: text.dataset.delay,
-    duration: 0.35,
+    duration: 0.25,
     y: 0,
     opacity: 1,
     ease: Power3.easeIn
