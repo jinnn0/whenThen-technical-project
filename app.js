@@ -48,6 +48,7 @@ function openNav() {
   let tl = gsap.timeline();
 
   tl.to('.nav', { duration: 0.8, top: '0', ease: 'expo.inOut' })
+    .to('.body-overlay', { display: 'block', ease: 'expo.inOut' }, '-=0.5')
     .to('.header', { duration: 0.01, backgroundColor: 'black' }, '-=0.4')
     .to('.join-btn', { backgroundColor: '#474747' }, 0.1)
     .to('.logo svg path', { fill: 'white' }, 0.1)
@@ -82,5 +83,6 @@ function closeNav() {
     .to('.bar-top', { duration: 0.005, y: 0, rotate: '0', ease: 'expo.inOut' })
     .to('.bar-bottom', { duration: 0.005, y: 0, rotate: '0', ease: 'expo.inOut' })
     .to('.bar-top', { duration: 0.4, scaleX: 1 }, 'scale')
-    .to('.bar-bottom', { duration: 0.4, scaleX: 1 }, 'scale');
+    .to('.bar-bottom', { duration: 0.4, scaleX: 1 }, 'scale')
+    .to('.body-overlay', { display: 'none', ease: 'expo.inOut' }, '-=1.3');
 }

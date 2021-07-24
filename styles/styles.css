@@ -245,7 +245,7 @@ p {
 
 .header {
   background-color: white;
-  height: 48px;
+  height: 70px;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -254,13 +254,13 @@ p {
 
 @media (min-width: 900px) {
   .header {
-    height: 76px;
+    height: 7836px;
   }
 }
 
 @media (min-width: 1200px) {
   .header {
-    height: 96px;
+    height: 120px;
   }
 }
 
@@ -532,10 +532,6 @@ p {
   background-color: rgba(0, 0, 0, 0.221);
 }
 
-.feature-section {
-  padding-bottom: 143px;
-}
-
 .feature-section .section-text__left {
   margin-bottom: 100px;
 }
@@ -603,7 +599,7 @@ p {
   margin-bottom: 2rem;
 }
 
-.overlay {
+.body-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -612,8 +608,4 @@ p {
   z-index: 150;
   background-color: #fcfcfcde;
   display: none;
-}
-
-.nav-open .overlay {
-  display: block;
 }

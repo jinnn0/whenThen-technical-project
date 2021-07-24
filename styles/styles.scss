@@ -8,7 +8,7 @@
 @import './components/feature';
 
 // body overlay when nav is open
-.overlay {
+.body-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -17,10 +17,4 @@
   z-index: 150;
   background-color: #fcfcfcde;
   display: none;
-}
-
-.nav-open {
-  .overlay {
-    display: block;
-  }
 }
