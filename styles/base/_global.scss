@@ -129,6 +129,10 @@ p {
 
 .page-padding {
   padding: 0 20px;
+
+  @include tablet {
+    padding: 0 40px;
+  }
 }
 
 // Section text

@@ -152,6 +152,12 @@ p {
   padding: 0 20px;
 }
 
+@media (min-width: 900px) {
+  .page-padding {
+    padding: 0 40px;
+  }
+}
+
 .section-text {
   display: -webkit-box;
   display: -ms-flexbox;
