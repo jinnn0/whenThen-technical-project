@@ -1,7 +1,7 @@
 // DOM elements
 const hamburger = document.querySelector('.hamburger');
 const texts = document.querySelectorAll('.js-text');
-const featureTextsLeft = document.querySelectorAll('.feature-section .js-text');
+const featureTextsLeft = document.querySelectorAll('.feature-section .section-text__left .js-text');
 const heroScreen = document.querySelector('.hero-section .js-hero-screen');
 
 // Register scrollTrigger
@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 // Hero overlay image animation
 window.addEventListener('scroll', (e) => {
-  let scrolled = window.pageYOffset;
+  const scrolled = window.pageYOffset;
 
   heroScreen.style.transform = `translate(-50%, ${constrain(
     scrolled * 0.09 - 60,
@@ -31,6 +31,7 @@ texts.forEach((text) => {
   });
 });
 
+// Feature texts left fade-in from the left
 featureTextsLeft.forEach((text) => {
   gsap.to(text, {
     scrollTrigger: text,
@@ -54,7 +55,7 @@ hamburger.addEventListener('click', (e) => {
 });
 
 function openNav() {
-  let tl = gsap.timeline();
+  const tl = gsap.timeline();
 
   tl.to('.nav', { duration: 0.8, top: '0', ease: 'expo.inOut' })
     .to('.body-overlay', { display: 'block', ease: 'expo.inOut' }, '-=0.5')
@@ -77,7 +78,7 @@ function openNav() {
 }
 
 function closeNav() {
-  let tl = gsap.timeline();
+  const tl = gsap.timeline();
 
   tl.to('.nav', { duration: 0.8, top: '-100%', ease: 'expo.inOut' }, 'navFadeUp')
     .to('.header', { duration: 0.01, backgroundColor: 'white' }, '-=0.42')
@@ -117,7 +118,6 @@ let swiper = new Swiper('.swiper-container', {
 window.addEventListener('resize', () => {
   innerWidth = window.innerWidth;
   swiper.params.slidesPerView = innerWidth < 700 ? 1 : 1.3;
-  console.log('Resizing...');
 });
 
 // Utility function
