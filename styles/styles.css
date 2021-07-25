@@ -126,7 +126,6 @@ p {
 }
 
 .section-padding {
-  padding: 30px 0;
   padding: 50px 0;
 }
 
@@ -143,9 +142,23 @@ p {
 }
 
 .page-container {
-  padding: 0 calc((100% - 1136px) / 2);
   width: 100%;
+  max-width: 1440px;
   height: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+@media (min-width: 590px) {
+  .page-container {
+    padding: 0 50px;
+  }
+}
+
+@media (min-width: 900px) {
+  .page-container {
+    padding: 0 80px;
+  }
 }
 
 .page-padding {

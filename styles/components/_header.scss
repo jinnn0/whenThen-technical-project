@@ -21,6 +21,8 @@
     .hamburger {
       width: 30px;
       height: 30px;
+      position: relative;
+      @include flex-col-center;
 
       @include tablet {
         width: 32.5px;
@@ -32,9 +34,6 @@
         height: 35px;
       }
 
-      position: relative;
-      @include flex-col-center;
-
       &:hover {
         cursor: pointer;
       }
@@ -42,6 +41,7 @@
       .bar {
         width: 17px;
         height: 1px;
+        background-color: $primary-color;
 
         @include tablet {
           width: 23px;
@@ -51,8 +51,6 @@
           width: 29px;
           height: 2px;
         }
-
-        background-color: $primary-color;
       }
 
       .bar-bottom {
