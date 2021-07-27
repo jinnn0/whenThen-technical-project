@@ -1,21 +1,5 @@
 .main-section {
-  .section-text {
-    // overrides global h4
-    h4 {
-      font-size: 0.77rem;
-      line-height: 1.1rem;
-
-      @include tablet {
-        font-size: 1.3rem;
-        line-height: 1.5rem;
-      }
-
-      @include desktop {
-        font-size: 1.33rem;
-        line-height: 1.96rem;
-      }
-    }
-  }
+  padding-top: 150px;
 
   // custom styles to Swiper
   .swiper-container {

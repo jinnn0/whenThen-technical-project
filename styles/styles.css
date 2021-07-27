@@ -40,7 +40,7 @@ h1 {
 
 @media (min-width: 900px) {
   h1 {
-    font-size: 3.5rem;
+    font-size: 3.4rem;
     line-height: 3rem;
   }
 }
@@ -77,17 +77,17 @@ h4 {
   line-height: 1.3rem;
 }
 
-@media (min-width: 590px) {
+@media (min-width: 600px) {
   h4 {
-    font-size: 0.8rem;
-    line-height: 1.15rem;
+    font-size: 1.3rem;
+    line-height: 1.7rem;
   }
 }
 
 @media (min-width: 900px) {
   h4 {
-    font-size: 1.3rem;
-    line-height: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.3rem;
   }
 }
 
@@ -104,14 +104,7 @@ p {
   line-height: 1.15rem;
 }
 
-@media (min-width: 590px) {
-  p {
-    font-size: 0.8rem;
-    line-height: 1.15rem;
-  }
-}
-
-@media (min-width: 900px) {
+@media (min-width: 600px) {
   p {
     font-size: 0.9rem;
     line-height: 1.3rem;
@@ -129,7 +122,7 @@ p {
   padding: 50px 0;
 }
 
-@media (min-width: 590px) {
+@media (min-width: 600px) {
   .section-padding {
     padding: 70px 0;
   }
@@ -142,32 +135,21 @@ p {
 }
 
 .page-container {
-  width: 100%;
-  max-width: 1440px;
+  width: 92%;
+  max-width: 1200px;
   height: 100%;
   margin: 0 auto;
-  padding: 20px;
 }
 
-@media (min-width: 590px) {
+@media (min-width: 600px) {
   .page-container {
-    padding: 0 50px;
+    width: 89%;
   }
 }
 
 @media (min-width: 900px) {
   .page-container {
-    padding: 0 80px;
-  }
-}
-
-.page-padding {
-  padding: 0 20px;
-}
-
-@media (min-width: 900px) {
-  .page-padding {
-    padding: 0 40px;
+    width: 87%;
   }
 }
 
@@ -190,7 +172,7 @@ p {
   position: relative;
 }
 
-@media (min-width: 590px) {
+@media (min-width: 900px) {
   .section-text {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -221,7 +203,7 @@ p {
   margin-bottom: 40px;
 }
 
-@media (min-width: 590px) {
+@media (min-width: 900px) {
   .section-text__left {
     -webkit-box-flex: 1;
         -ms-flex: 1;
@@ -230,7 +212,7 @@ p {
   }
 }
 
-@media (min-width: 590px) {
+@media (min-width: 900px) {
   .section-text__right {
     -webkit-box-flex: 1;
         -ms-flex: 1;
@@ -249,7 +231,7 @@ p {
 
 .header {
   background-color: white;
-  height: 70px;
+  height: 64px;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -258,13 +240,13 @@ p {
 
 @media (min-width: 900px) {
   .header {
-    height: 83px;
+    height: 74px;
   }
 }
 
 @media (min-width: 1200px) {
   .header {
-    height: 120px;
+    height: 84px;
   }
 }
 
@@ -324,9 +306,15 @@ p {
   background-color: #000000;
 }
 
+@media (min-width: 600px) {
+  .header .header-inner .hamburger .bar {
+    width: 20px;
+  }
+}
+
 @media (min-width: 900px) {
   .header .header-inner .hamburger .bar {
-    width: 23px;
+    width: 26px;
   }
 }
 
@@ -346,10 +334,17 @@ p {
   height: 30px;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 600px) {
   .header .header-inner .logo {
     width: 37px;
     height: 32px;
+  }
+}
+
+@media (min-width: 900px) {
+  .header .header-inner .logo {
+    width: 42px;
+    height: 37px;
   }
 }
 
@@ -369,7 +364,7 @@ p {
   line-height: 30px;
 }
 
-.header .header-inner .logo a img {
+.header .header-inner .logo a svg {
   width: 100%;
   height: 100%;
 }
@@ -382,22 +377,26 @@ p {
   height: 30px;
   padding: 3px;
   border-radius: 20px;
-  font-size: 0.5rem;
+  font-size: 0.6rem;
   -webkit-transition: opacity 0.05s ease-in-out;
   transition: opacity 0.05s ease-in-out;
 }
 
-.header .header-inner .join-btn:hover {
-  cursor: pointer;
-  opacity: 0.85;
+@media (min-width: 600px) {
+  .header .header-inner .join-btn {
+    width: 85px;
+    height: 35px;
+    padding: 6.5px;
+    font-size: 0.7rem;
+  }
 }
 
 @media (min-width: 900px) {
   .header .header-inner .join-btn {
-    width: 96px;
-    height: 35px;
-    padding: 6.5px;
-    font-size: 0.75rem;
+    width: 110px;
+    height: 40px;
+    padding: 7px;
+    font-size: 1rem;
   }
 }
 
@@ -408,6 +407,11 @@ p {
     padding: 10px;
     font-size: 1rem;
   }
+}
+
+.header .header-inner .join-btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
 }
 
 .nav {
@@ -421,6 +425,12 @@ p {
   z-index: 200;
   background-color: #000000;
   color: white;
+}
+
+@media (min-width: 1200px) {
+  .nav {
+    min-height: 400px;
+  }
 }
 
 .nav ul {
@@ -440,13 +450,6 @@ p {
   }
 }
 
-@media (min-width: 1200px) {
-  .nav ul li {
-    font-size: 1.8rem;
-    line-height: 4rem;
-  }
-}
-
 .nav ul a {
   color: white;
   text-decoration: none;
@@ -457,7 +460,7 @@ p {
   border-bottom: 1px solid white;
 }
 
-@media (min-width: 590px) {
+@media (min-width: 900px) {
   .hero-section .section-text__left {
     -webkit-box-flex: 1.1;
         -ms-flex: 1.1;
@@ -489,23 +492,8 @@ p {
   opacity: 0;
 }
 
-.main-section .section-text h4 {
-  font-size: 0.77rem;
-  line-height: 1.1rem;
-}
-
-@media (min-width: 900px) {
-  .main-section .section-text h4 {
-    font-size: 1.3rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  .main-section .section-text h4 {
-    font-size: 1.33rem;
-    line-height: 1.96rem;
-  }
+.main-section {
+  padding-top: 150px;
 }
 
 .main-section .swiper-container {
@@ -540,7 +528,7 @@ p {
 }
 
 .feature-section .section-text__left {
-  margin-bottom: 100px;
+  margin-bottom: 65px;
 }
 
 .feature-section .section-text__left h4 {
@@ -550,25 +538,32 @@ p {
   opacity: 1;
 }
 
+@media (min-width: 600px) {
+  .feature-section .section-text__left h4 {
+    margin-bottom: 12px;
+  }
+}
+
 .feature-section .section-text__left p {
   margin-bottom: 32px;
 }
 
 .feature-section .section-text__left .feature-wrapper {
   margin-bottom: 10px;
-  width: 290px;
+  width: 400px;
   position: relative;
-}
-
-@media (min-width: 590px) {
-  .feature-section .section-text__left .feature-wrapper {
-    width: 320px;
-  }
 }
 
 @media (min-width: 900px) {
   .feature-section .section-text__left .feature-wrapper {
-    width: 416px;
+    padding-right: 40px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .feature-section .section-text__left .feature-wrapper {
+    padding-right: 20px;
+    width: 415px;
   }
 }
 
@@ -589,11 +584,17 @@ p {
   content: '';
   position: absolute;
   top: 0%;
-  left: -100%;
+  left: -150%;
   width: 100%;
   height: 100%;
   z-index: 10;
   background-color: white;
+}
+
+@media (min-width: 900px) {
+  .feature-section .section-text__left .feature-wrapper:before {
+    left: -120%;
+  }
 }
 
 .feature-section .section-text__right {
@@ -612,7 +613,7 @@ p {
           flex-direction: column;
 }
 
-@media (min-width: 590px) {
+@media (min-width: 900px) {
   .feature-section .section-text__right {
     padding-top: 48px;
     -ms-flex-item-align: start;

@@ -10,6 +10,10 @@
   background-color: $primary-color;
   color: white;
 
+  @include desktop {
+    min-height: 400px;
+  }
+
   ul {
     list-style-type: none;
     padding-top: 1.3rem;
@@ -21,11 +25,6 @@
       @include tablet {
         font-size: 1.4rem;
         line-height: 3.2rem;
-      }
-
-      @include desktop {
-        font-size: 1.8rem; // 32px
-        line-height: 4rem; // 72px
       }
     }
 

@@ -39,7 +39,7 @@ h1 {
   line-height: 2.5rem;
 
   @include tablet {
-    font-size: 3.5rem;
+    font-size: 3.4rem;
     line-height: 3rem;
   }
 
@@ -70,13 +70,13 @@ h4 {
   line-height: 1.3rem;
 
   @include tablet-sm {
-    font-size: 0.8rem;
-    line-height: 1.15rem;
+    font-size: 1.3rem;
+    line-height: 1.7rem;
   }
 
   @include tablet {
-    font-size: 1.3rem;
-    line-height: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.3rem;
   }
 
   @include desktop {
@@ -91,11 +91,6 @@ p {
   line-height: 1.15rem;
 
   @include tablet-sm {
-    font-size: 0.8rem;
-    line-height: 1.15rem;
-  }
-
-  @include tablet {
     font-size: 0.9rem;
     line-height: 1.3rem;
   }
@@ -121,18 +116,17 @@ p {
 
 // Page conatiner & padding
 .page-container {
-  width: 100%;
-  max-width: 1440px;
+  width: 92%;
+  max-width: 1200px;
   height: 100%;
   margin: 0 auto;
-  padding: 20px;
 
   @include tablet-sm {
-    padding: 0 50px;
+    width: 89%;
   }
 
   @include tablet {
-    padding: 0 80px;
+    width: 87%;
   }
 }
 
@@ -143,7 +137,7 @@ p {
   text-align: center;
   position: relative;
 
-  @include tablet-sm {
+  @include tablet {
     flex-direction: row;
     align-items: center;
     text-align: start;
@@ -164,14 +158,14 @@ p {
   &__left {
     margin-bottom: 40px;
 
-    @include tablet-sm {
+    @include tablet {
       flex: 1;
       margin-bottom: 0;
     }
   }
 
   &__right {
-    @include tablet-sm {
+    @include tablet {
       flex: 1;
       display: flex;
       justify-content: center;

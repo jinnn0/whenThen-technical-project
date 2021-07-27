@@ -1,21 +1,23 @@
 .header {
   background-color: white;
-  height: 70px;
+  height: 64px;
   position: sticky;
   top: 0;
   z-index: 300;
 
   @include tablet {
-    height: 83px;
+    height: 74px;
   }
 
   @include desktop {
-    height: 120px;
+    height: 84px;
   }
 
   .header-inner {
     height: 100%;
-    @include flex-row-space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
     // hamburger
     .hamburger {
@@ -43,8 +45,12 @@
         height: 1px;
         background-color: $primary-color;
 
+        @include tablet-sm {
+          width: 20px;
+        }
+
         @include tablet {
-          width: 23px;
+          width: 26px;
         }
 
         @include desktop {
@@ -63,9 +69,14 @@
       width: 30px;
       height: 30px;
 
-      @include tablet {
+      @include tablet-sm {
         width: 37px;
         height: 32px;
+      }
+
+      @include tablet {
+        width: 42px;
+        height: 37px;
       }
 
       @include desktop {
@@ -81,7 +92,7 @@
         text-decoration: none;
         line-height: 30px;
 
-        img {
+        svg {
           width: 100%;
           height: 100%;
         }
@@ -97,19 +108,21 @@
       height: 30px;
       padding: 3px;
       border-radius: 20px;
-      font-size: 0.5rem;
+      font-size: 0.6rem;
       transition: opacity 0.05s ease-in-out;
 
-      &:hover {
-        cursor: pointer;
-        opacity: 0.85;
+      @include tablet-sm {
+        width: 85px;
+        height: 35px;
+        padding: 6.5px;
+        font-size: 0.7rem;
       }
 
       @include tablet {
-        width: 96px;
-        height: 35px;
-        padding: 6.5px;
-        font-size: 0.75rem;
+        width: 110px;
+        height: 40px;
+        padding: 7px;
+        font-size: 1rem;
       }
 
       @include desktop {
@@ -117,6 +130,11 @@
         height: 40px;
         padding: 10px;
         font-size: 1rem;
+      }
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.8;
       }
     }
   }
