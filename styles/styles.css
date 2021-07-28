@@ -45,7 +45,7 @@ h1 {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1500px) {
   h1 {
     font-size: 5rem;
     line-height: 4rem;
@@ -64,7 +64,7 @@ h2 {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1500px) {
   h2 {
     font-size: 4rem;
     line-height: 4rem;
@@ -73,7 +73,7 @@ h2 {
 
 h4 {
   font-family: 'MonotypeMedium';
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 1.3rem;
 }
 
@@ -91,7 +91,7 @@ h4 {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1500px) {
   h4 {
     font-size: 1.33rem;
     line-height: 1.96rem;
@@ -111,7 +111,7 @@ p {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1500px) {
   p {
     font-size: 1rem;
     line-height: 1.59rem;
@@ -128,7 +128,7 @@ p {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1500px) {
   .section-padding {
     padding: 100px 0;
   }
@@ -136,7 +136,7 @@ p {
 
 .page-container {
   width: 92%;
-  max-width: 1200px;
+  max-width: 1000px;
   height: 100%;
   margin: 0 auto;
 }
@@ -150,6 +150,12 @@ p {
 @media (min-width: 900px) {
   .page-container {
     width: 87%;
+  }
+}
+
+@media (min-width: 1500px) {
+  .page-container {
+    max-width: 1200px;
   }
 }
 
@@ -185,7 +191,7 @@ p {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1500px) {
   .section-text {
     margin-bottom: 100px;
   }
@@ -244,7 +250,7 @@ p {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1500px) {
   .header {
     height: 84px;
   }
@@ -289,7 +295,7 @@ p {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1500px) {
   .header .header-inner .hamburger {
     width: 35px;
     height: 35px;
@@ -318,7 +324,7 @@ p {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1500px) {
   .header .header-inner .hamburger .bar {
     width: 29px;
     height: 2px;
@@ -348,7 +354,7 @@ p {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1500px) {
   .header .header-inner .logo {
     width: 50.51px;
     height: 35.98px;
@@ -400,7 +406,7 @@ p {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1500px) {
   .header .header-inner .join-btn {
     width: 104px;
     height: 40px;
@@ -427,7 +433,7 @@ p {
   color: white;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1500px) {
   .nav {
     min-height: 400px;
   }
@@ -550,8 +556,14 @@ p {
 
 .feature-section .section-text__left .feature-wrapper {
   margin-bottom: 10px;
-  width: 400px;
+  width: 100%;
   position: relative;
+}
+
+@media (min-width: 600px) {
+  .feature-section .section-text__left .feature-wrapper {
+    width: 400px;
+  }
 }
 
 @media (min-width: 900px) {
@@ -560,7 +572,7 @@ p {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1500px) {
   .feature-section .section-text__left .feature-wrapper {
     padding-right: 20px;
     width: 415px;

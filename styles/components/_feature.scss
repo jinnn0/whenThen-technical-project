@@ -19,8 +19,12 @@
 
       .feature-wrapper {
         margin-bottom: 10px;
-        width: 400px;
+        width: 100%;
         position: relative;
+
+        @include tablet-sm {
+          width: 400px;
+        }
 
         @include tablet {
           padding-right: 40px;
